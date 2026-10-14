@@ -1,0 +1,44 @@
+name: Harvest payments sources
+
+on:
+  schedule:
+    # Every 6 hours (UTC). Small feeds (RBA, PYMNTS main feed) hold only the latest
+    # items, so a once-a-day poll would miss stories on busy days. Free on public repos.
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Optional YYYY-MM-DD: pull full history from this date (WordPress sources only)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run harvester
+        run: |
+          if [ -n "${{ github.event.inputs.since }}" ]; then
+            python harvest.py --since "${{ github.event.inputs.since }}"
+          else
+            python harvest.py
+          fi
+
+      - name: Commit new items
+        run: |
+          git config user.name "harvester-bot"
+          git config user.email "harvester-bot@users.noreply.github.com"
+          git add data/items.jsonl data/health.json
+          git diff --cached --quiet || git commit -m "harvest: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
