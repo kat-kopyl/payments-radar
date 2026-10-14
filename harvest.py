@@ -17,6 +17,9 @@ Usage
                                          # write the stored items inside a window to a file
   python harvest.py --health             # print the last health report
 
+Source types: feed (RSS/Atom/RDF) · wp_rest (WordPress API, full history) ·
+html_list (listing page without a feed; items dated by first sighting if no date is found)
+
 Only dependencies: requests, pyyaml (pip install -r requirements.txt).
 """
 import argparse
@@ -89,11 +92,20 @@ def parse_date(s: str):
     m = re.match(r"(\d{4}-\d{2}-\d{2})", s)
     if m:
         return m.group(1)
-    for fmt in ("%d %B %Y", "%d %b %Y", "%B %d, %Y", "%b %d, %Y", "%d/%m/%Y"):
+    for fmt in ("%d %B %Y", "%d %b %Y", "%B %d, %Y", "%b %d, %Y", "%d/%m/%Y",
+                "%A, %B %d, %Y - %H:%M", "%A, %d %B %Y - %H:%M", "%A, %B %d, %Y"):
         try:
             return dt.datetime.strptime(s, fmt).date().isoformat()
         except Exception:
             pass
+    # last resort: find a "13 Oct 2026" / "October 13, 2026" anywhere in the string
+    m = re.search(r"(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4})", s) or re.search(r"([A-Za-z]{3,9})\s+(\d{1,2}),\s+(\d{4})", s)
+    if m:
+        for fmt in ("%d %b %Y", "%d %B %Y", "%b %d %Y", "%B %d %Y"):
+            try:
+                return dt.datetime.strptime(" ".join(m.groups()), fmt).date().isoformat()
+            except Exception:
+                pass
     return None
 
 
@@ -196,12 +208,42 @@ def fetch_wp_rest(src, since=None):
     return out
 
 
+def fetch_html_list(src):
+    """Publisher listing pages without a feed. Finds article links by a URL regex,
+    takes the anchor text as the title, and looks for a date within the next 400
+    characters of HTML; if none, the item is dated by first sighting (flagged)."""
+    pattern = re.compile(src["link_pattern"])
+    out, seen = [], set()
+    for page in src.get("pages") or [src["url"]]:
+        html_text = get(page).text
+        for m in re.finditer(r'<a\s[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', html_text, re.S | re.I):
+            href, inner = m.group(1), m.group(2)
+            if href.startswith("/"):
+                base = re.match(r"https?://[^/]+", page).group(0)
+                href = base + href
+            if not pattern.search(href) or href in seen:
+                continue
+            title = clean_text(inner, 300)
+            if len(title) < 15:          # image/icon anchors; the text anchor comes later
+                continue
+            seen.add(href)
+            window = html_text[m.end(): m.end() + 400]
+            d = parse_date(clean_text(window, 400))
+            out.append({"title": title, "url": href, "date": d or "", "summary": "",
+                        "date_estimated": d is None})
+        time.sleep(0.5)
+    return out
+
+
 # ----------------------------------------------------------------------------- main
 
 def harvest(since=None, only=None):
     cfg = yaml.safe_load(open(FEEDS_PATH, encoding="utf-8"))
     existing = load_existing()
-    health = {"run_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "since": since, "sources": {}}
+    now = dt.datetime.now(dt.timezone.utc)
+    today = now.date().isoformat()
+    tomorrow = (now.date() + dt.timedelta(days=1)).isoformat()
+    health = {"run_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "since": since, "sources": {}}
     new_items = []
     for src in cfg["sources"]:
         name = src["name"]
@@ -216,6 +258,8 @@ def harvest(since=None, only=None):
                 raw = fetch_wp_rest(src, since=since)
             elif src["type"] == "feed":
                 raw = fetch_feed(src)
+            elif src["type"] == "html_list":
+                raw = fetch_html_list(src)
             else:
                 raise ValueError(f"unknown type {src['type']}")
             added = 0
@@ -226,6 +270,10 @@ def harvest(since=None, only=None):
                     continue
                 iid = item_id(url)
                 d = parse_date(it.get("date", ""))
+                if d and d > tomorrow:      # events and webinars dated in the future
+                    continue
+                if not d and it.get("date_estimated"):
+                    d = today               # dated by first sighting; flagged below
                 if d:
                     dates.append(d)
                 if iid in existing:
@@ -239,6 +287,7 @@ def harvest(since=None, only=None):
                     "title": clean_text(it.get("title", ""), 300),
                     "url": canonical_url(url),
                     "published": d,
+                    "date_estimated": bool(it.get("date_estimated")),
                     "summary": clean_text(it.get("summary", "")),
                     "fetched_at": health["run_at"],
                 })
