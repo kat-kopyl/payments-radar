@@ -1,0 +1,230 @@
+# Source registry for the payments news harvester.
+# Edit here to add/remove sources; the harvester reports per-source health each run,
+# so a dead feed is visible, not silent.
+#
+# type: feed     — RSS 2.0 / Atom / RSS 1.0. Holds only what the publisher exposes
+#                  (often 10–50 items), so it must be polled daily to build history.
+# type: wp_rest  — WordPress REST API. Supports full history (--since), so a once-per-cycle
+#                  pull is complete even if the daily poller missed days.
+# tier: 1 = scanning source (discovery); 2 = primary source (regulators, central banks, schemes, standards bodies)
+# kind: aggregator | regulator | central-bank | scheme | standards
+# verified: true  — confirmed working on 12 Oct 2026. false — URL believed correct; check health.json after the first run.
+
+polite_delay_seconds: 1
+
+sources:
+  # ---------------------------------------------------------------- Tier 1: scanning sources
+  - name: pymnts
+    type: wp_rest
+    url: https://www.pymnts.com
+    tier: 1
+    kind: aggregator
+    verified: true          # REST API confirmed; ~30–50 posts/day; full-window pull supported
+
+  - name: finextra-payments
+    type: feed
+    url: https://www.finextra.com/rss/channel.aspx?channel=payments
+    tier: 1
+    kind: aggregator
+    verified: true          # ~50 items in feed; mixes news, videos, events, blogs — triage ignores non-news
+
+  - name: finextra-headlines
+    type: feed
+    url: https://www.finextra.com/rss/headlines.aspx
+    tier: 1
+    kind: aggregator
+    verified: true
+
+  - name: thepaypers
+    type: feed
+    url: https://thepaypers.com/rss/news
+    tier: 1
+    kind: aggregator
+    verified: false         # The Paypers feed URL could not be confirmed on 12 Oct 2026 (JS page). If health shows error,
+                            # try https://thepaypers.com/rss or ask Claude to locate the current feed URL; the editor's
+                            # coverage check searches thepaypers.com directly regardless.
+
+  - name: ft-companies-financials
+    type: feed
+    url: https://www.ft.com/companies/financials?format=rss
+    tier: 1
+    kind: aggregator
+    verified: false         # FT section feeds give headlines + standfirst only (paywall); still useful for discovery
+
+  # ---------------------------------------------------------------- Tier 2: Australian regulators
+  - name: rba-media-releases
+    type: feed
+    url: https://www.rba.gov.au/rss/rss-cb-media-releases.xml
+    tier: 2
+    kind: central-bank
+    verified: true          # feed holds the current month only — daily polling essential
+
+  - name: rba-speeches
+    type: feed
+    url: https://www.rba.gov.au/rss/rss-cb-speeches.xml
+    tier: 2
+    kind: central-bank
+    verified: true
+
+  - name: treasury-au-consultations
+    type: feed
+    url: https://treasury.gov.au/consultation/rss.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: treasury-au-media
+    type: feed
+    url: https://treasury.gov.au/media-release/rss.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: asic-media-releases
+    type: feed
+    url: https://asic.gov.au/about-asic/news-centre/find-a-media-release/rss
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: apra-news
+    type: feed
+    url: https://www.apra.gov.au/rss.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: austrac-media
+    type: feed
+    url: https://www.austrac.gov.au/rss.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: accc-media
+    type: feed
+    url: https://www.accc.gov.au/rss/media_releases.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  # ---------------------------------------------------------------- Tier 2: peer central banks & regulators
+  - name: fed-press
+    type: feed
+    url: https://www.federalreserve.gov/feeds/press_all.xml
+    tier: 2
+    kind: central-bank
+    verified: false
+
+  - name: ecb-press
+    type: feed
+    url: https://www.ecb.europa.eu/rss/press.html
+    tier: 2
+    kind: central-bank
+    verified: false
+
+  - name: boe-news
+    type: feed
+    url: https://www.bankofengland.co.uk/rss/news
+    tier: 2
+    kind: central-bank
+    verified: false
+
+  - name: fca-news
+    type: feed
+    url: https://www.fca.org.uk/news/rss.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: psr-news
+    type: feed
+    url: https://www.psr.org.uk/rss/news/
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: bis-press
+    type: feed
+    url: https://www.bis.org/doclist/press_releases.rss
+    tier: 2
+    kind: central-bank
+    verified: false
+
+  - name: bis-cbspeeches
+    type: feed
+    url: https://www.bis.org/doclist/cbspeeches.rss
+    tier: 2
+    kind: central-bank
+    verified: false
+
+  - name: mas-media
+    type: feed
+    url: https://www.mas.gov.sg/rss/media-releases
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: hkma-press
+    type: feed
+    url: https://www.hkma.gov.hk/eng/rss/press-releases.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: cfpb-newsroom
+    type: feed
+    url: https://www.consumerfinance.gov/about-us/newsroom/feed/
+    tier: 2
+    kind: regulator
+    verified: false
+
+  - name: occ-news
+    type: feed
+    url: https://www.occ.gov/rss/occ_news.xml
+    tier: 2
+    kind: regulator
+    verified: false
+
+  # ---------------------------------------------------------------- Tier 2: schemes, PSPs, standards
+  - name: swift-news
+    type: feed
+    url: https://www.swift.com/news-events/news/rss.xml
+    tier: 2
+    kind: scheme
+    verified: false
+
+  - name: mastercard-newsroom
+    type: feed
+    url: https://www.mastercard.com/news/rss.xml
+    tier: 2
+    kind: scheme
+    verified: false
+
+  - name: visa-newsroom
+    type: feed
+    url: https://usa.visa.com/about-visa/newsroom.rss
+    tier: 2
+    kind: scheme
+    verified: false
+
+  - name: paypal-newsroom
+    type: feed
+    url: https://newsroom.paypal-corp.com/rss
+    tier: 2
+    kind: scheme
+    verified: false
+
+  - name: stripe-newsroom
+    type: feed
+    url: https://stripe.com/newsroom/news/rss
+    tier: 2
+    kind: scheme
+    verified: false
+
+  - name: emvco-news
+    type: feed
+    url: https://www.emvco.com/feed/
+    tier: 2
+    kind: standards
+    verified: false
