@@ -1,34 +1,38 @@
 {
-  "run_at": "2026-10-14T01:02:07Z",
+  "run_at": "2026-10-14T03:40:57Z",
   "since": null,
   "sources": {
     "pymnts": {
       "status": "ok",
       "fetched": 200,
-      "added": 1,
+      "added": 2,
       "oldest": "2026-10-06",
       "newest": "2026-10-14",
-      "seconds": 2.6
+      "seconds": 2.4
     },
     "finextra-payments": {
       "status": "ok",
       "fetched": 49,
       "added": 1,
-      "oldest": "2026-08-25",
-      "newest": "2027-01-26",
-      "seconds": 0.4
+      "oldest": "2026-09-15",
+      "newest": "2026-10-13",
+      "seconds": 0.1
     },
     "finextra-headlines": {
       "status": "ok",
       "fetched": 53,
       "added": 0,
       "oldest": "2026-09-29",
-      "newest": "2027-01-26",
-      "seconds": 0.4
+      "newest": "2026-10-14",
+      "seconds": 0.1
     },
     "thepaypers": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://thepaypers.com/rss/news"
+      "status": "ok",
+      "fetched": 15,
+      "added": 15,
+      "oldest": "2026-10-09",
+      "newest": "2026-10-14",
+      "seconds": 9.5
     },
     "ft-companies-financials": {
       "status": "ok",
@@ -36,15 +40,15 @@
       "added": 0,
       "oldest": "2026-10-09",
       "newest": "2026-10-13",
-      "seconds": 0.5
+      "seconds": 0.4
     },
     "rba-media-releases": {
       "status": "ok",
       "fetched": 1,
-      "added": 0,
-      "oldest": "2026-10-01",
-      "newest": "2026-10-01",
-      "seconds": 0.7
+      "added": 1,
+      "oldest": "2026-10-14",
+      "newest": "2026-10-14",
+      "seconds": 0.4
     },
     "rba-speeches": {
       "status": "ok",
@@ -52,19 +56,15 @@
       "added": 0,
       "oldest": "2026-09-22",
       "newest": "2026-09-22",
-      "seconds": 0.3
+      "seconds": 0.2
     },
     "treasury-au-consultations": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://treasury.gov.au/consultation/rss.xml"
-    },
-    "treasury-au-media": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://treasury.gov.au/media-release/rss.xml"
-    },
-    "asic-media-releases": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/rss"
+      "status": "ok",
+      "fetched": 10,
+      "added": 10,
+      "oldest": "2026-09-11",
+      "newest": "2026-10-14",
+      "seconds": 1.0
     },
     "apra-news": {
       "status": "ok",
@@ -72,15 +72,31 @@
       "added": 0,
       "oldest": "2026-08-27",
       "newest": "2026-10-13",
+      "seconds": 0.2
+    },
+    "asic-news-proxy": {
+      "status": "ok",
+      "fetched": 100,
+      "added": 100,
+      "oldest": "2026-09-30",
+      "newest": "2026-10-13",
       "seconds": 0.5
     },
-    "austrac-media": {
-      "status": "error",
-      "error": "HTTPSConnectionPool(host='www.austrac.gov.au', port=443): Read timed out. (read timeout=30)"
+    "austrac-proxy": {
+      "status": "ok",
+      "fetched": 18,
+      "added": 18,
+      "oldest": "2026-09-30",
+      "newest": "2026-10-13",
+      "seconds": 0.2
     },
-    "accc-media": {
-      "status": "error",
-      "error": "403 Client Error: Forbidden for url: https://www.accc.gov.au/rss/media_releases.xml"
+    "accc-proxy": {
+      "status": "ok",
+      "fetched": 13,
+      "added": 13,
+      "oldest": "2014-10-25",
+      "newest": "2026-10-13",
+      "seconds": 0.3
     },
     "fed-press": {
       "status": "ok",
@@ -104,43 +120,55 @@
       "added": 0,
       "oldest": "2026-06-24",
       "newest": "2026-10-13",
-      "seconds": 0.6
+      "seconds": 0.4
     },
     "fca-news": {
       "status": "ok",
       "fetched": 20,
       "added": 0,
-      "oldest": null,
-      "newest": null,
-      "seconds": 0.5
-    },
-    "psr-news": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://www.psr.org.uk/rss/news/"
-    },
-    "bis-press": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://www.bis.org/doclist/press_releases.rss"
-    },
-    "bis-cbspeeches": {
-      "status": "ok",
-      "fetched": 50,
-      "added": 2,
-      "oldest": "2026-10-05",
+      "oldest": "2026-09-21",
       "newest": "2026-10-13",
-      "seconds": 0.9
+      "seconds": 0.1
     },
-    "mas-media": {
+    "psr-proxy": {
       "status": "ok",
       "fetched": 0,
       "added": 0,
       "oldest": null,
       "newest": null,
-      "seconds": 0.6
+      "seconds": 0.2
+    },
+    "bis-press": {
+      "status": "ok",
+      "fetched": 10,
+      "added": 10,
+      "oldest": "2026-05-27",
+      "newest": "2026-10-13",
+      "seconds": 0.5
+    },
+    "bis-cbspeeches": {
+      "status": "ok",
+      "fetched": 50,
+      "added": 0,
+      "oldest": "2026-10-05",
+      "newest": "2026-10-13",
+      "seconds": 0.5
+    },
+    "mas-proxy": {
+      "status": "ok",
+      "fetched": 100,
+      "added": 100,
+      "oldest": "2017-10-23",
+      "newest": "2026-10-14",
+      "seconds": 0.4
     },
     "hkma-press": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://www.hkma.gov.hk/eng/rss/press-releases.xml"
+      "status": "ok",
+      "fetched": 420,
+      "added": 420,
+      "oldest": "2025-10-14",
+      "newest": "2026-10-13",
+      "seconds": 4.6
     },
     "cfpb-newsroom": {
       "status": "ok",
@@ -156,27 +184,23 @@
       "added": 0,
       "oldest": "2026-09-23",
       "newest": "2026-10-13",
-      "seconds": 0.3
+      "seconds": 0.4
     },
-    "swift-news": {
-      "status": "error",
-      "error": "403 Client Error: Forbidden for url: https://www.swift.com/news-events/news/rss.xml"
+    "schemes-proxy": {
+      "status": "ok",
+      "fetched": 100,
+      "added": 100,
+      "oldest": "2025-11-11",
+      "newest": "2026-10-14",
+      "seconds": 0.6
     },
-    "mastercard-newsroom": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://www.mastercard.com/news/rss.xml"
-    },
-    "visa-newsroom": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://usa.visa.com/about-visa/newsroom.rss"
-    },
-    "paypal-newsroom": {
-      "status": "error",
-      "error": "syntax error: line 2, column 0"
-    },
-    "stripe-newsroom": {
-      "status": "error",
-      "error": "404 Client Error: Not Found for url: https://stripe.com/newsroom/news/rss"
+    "psps-proxy": {
+      "status": "ok",
+      "fetched": 100,
+      "added": 100,
+      "oldest": "2024-02-14",
+      "newest": "2026-10-14",
+      "seconds": 0.5
     },
     "emvco-news": {
       "status": "ok",
@@ -184,7 +208,25 @@
       "added": 0,
       "oldest": null,
       "newest": null,
-      "seconds": 2.0
+      "seconds": 1.8
+    },
+    "treasury-au-media": {
+      "status": "disabled"
+    },
+    "mastercard-newsroom": {
+      "status": "disabled"
+    },
+    "visa-newsroom": {
+      "status": "disabled"
+    },
+    "stripe-newsroom": {
+      "status": "disabled"
+    },
+    "paypal-newsroom": {
+      "status": "disabled"
+    },
+    "swift-news": {
+      "status": "disabled"
     }
   }
 }
