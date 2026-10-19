@@ -1,29 +1,29 @@
 {
-  "run_at": "2026-10-18T18:46:46Z",
+  "run_at": "2026-10-19T01:00:17Z",
   "since": null,
   "sources": {
     "pymnts": {
       "status": "ok",
       "fetched": 200,
-      "added": 0,
-      "oldest": "2026-10-08",
-      "newest": "2026-10-17",
-      "seconds": 2.6
+      "added": 6,
+      "oldest": "2026-10-09",
+      "newest": "2026-10-19",
+      "seconds": 2.5
     },
     "finextra-payments": {
       "status": "ok",
       "fetched": 49,
       "added": 0,
-      "oldest": "2026-08-25",
-      "newest": "2026-10-16",
-      "seconds": 1.0
+      "oldest": "2026-10-05",
+      "newest": "2026-10-20",
+      "seconds": 0.2
     },
     "finextra-headlines": {
       "status": "ok",
       "fetched": 52,
-      "added": 0,
+      "added": 2,
       "oldest": "2026-10-07",
-      "newest": "2026-10-16",
+      "newest": "2026-10-20",
       "seconds": 0.1
     },
     "thepaypers": {
@@ -31,13 +31,13 @@
       "fetched": 15,
       "added": 0,
       "oldest": "2026-10-13",
-      "newest": "2026-10-18",
-      "seconds": 8.7
+      "newest": "2026-10-19",
+      "seconds": 17.7
     },
     "ft-companies-financials": {
       "status": "ok",
       "fetched": 25,
-      "added": 0,
+      "added": 1,
       "oldest": "2026-10-15",
       "newest": "2026-10-18",
       "seconds": 0.5
@@ -56,15 +56,15 @@
       "added": 0,
       "oldest": "2026-09-22",
       "newest": "2026-09-22",
-      "seconds": 0.7
+      "seconds": 0.2
     },
     "treasury-au-consultations": {
       "status": "ok",
       "fetched": 10,
-      "added": 0,
+      "added": 1,
       "oldest": "2026-09-11",
-      "newest": "2026-10-15",
-      "seconds": 1.0
+      "newest": "2026-10-19",
+      "seconds": 1.4
     },
     "apra-news": {
       "status": "ok",
@@ -72,31 +72,19 @@
       "added": 0,
       "oldest": "2026-08-31",
       "newest": "2026-10-15",
-      "seconds": 0.5
+      "seconds": 0.7
     },
     "asic-news-proxy": {
-      "status": "ok",
-      "fetched": 100,
-      "added": 1,
-      "oldest": "2026-10-06",
-      "newest": "2026-10-17",
-      "seconds": 0.4
+      "status": "error",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=site:asic.gov.au+when:14d&hl=en-AU&gl=AU&ceid=AU:en"
     },
     "austrac-proxy": {
-      "status": "ok",
-      "fetched": 11,
-      "added": 0,
-      "oldest": "2026-10-08",
-      "newest": "2026-10-16",
-      "seconds": 0.2
+      "status": "error",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=site:austrac.gov.au+when:14d&hl=en-AU&gl=AU&ceid=AU:en"
     },
     "accc-proxy": {
-      "status": "ok",
-      "fetched": 21,
-      "added": 1,
-      "oldest": "2025-12-16",
-      "newest": "2026-10-16",
-      "seconds": 0.2
+      "status": "error",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=site:accc.gov.au+when:14d&hl=en-AU&gl=AU&ceid=AU:en"
     },
     "fed-press": {
       "status": "ok",
@@ -104,7 +92,7 @@
       "added": 0,
       "oldest": "2026-09-11",
       "newest": "2026-10-16",
-      "seconds": 0.2
+      "seconds": 0.1
     },
     "ecb-press": {
       "status": "ok",
@@ -112,7 +100,7 @@
       "added": 0,
       "oldest": "2026-09-30",
       "newest": "2026-10-17",
-      "seconds": 1.1
+      "seconds": 1.6
     },
     "boe-news": {
       "status": "ok",
@@ -120,7 +108,7 @@
       "added": 0,
       "oldest": "2026-07-02",
       "newest": "2026-10-16",
-      "seconds": 0.2
+      "seconds": 0.9
     },
     "fca-news": {
       "status": "ok",
@@ -131,12 +119,8 @@
       "seconds": 0.1
     },
     "psr-proxy": {
-      "status": "ok",
-      "fetched": 1,
-      "added": 0,
-      "oldest": "2026-10-15",
-      "newest": "2026-10-15",
-      "seconds": 0.2
+      "status": "error",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=site:psr.org.uk+when:14d&hl=en-GB&gl=GB&ceid=GB:en"
     },
     "bis-press": {
       "status": "ok",
@@ -155,12 +139,8 @@
       "seconds": 0.5
     },
     "mas-proxy": {
-      "status": "ok",
-      "fetched": 100,
-      "added": 7,
-      "oldest": "2017-10-23",
-      "newest": "2026-10-17",
-      "seconds": 0.4
+      "status": "error",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=site:mas.gov.sg+when:14d&hl=en-SG&gl=SG&ceid=SG:en"
     },
     "hkma-press": {
       "status": "ok",
@@ -168,7 +148,7 @@
       "added": 0,
       "oldest": "2025-10-15",
       "newest": "2026-10-15",
-      "seconds": 1.1
+      "seconds": 3.6
     },
     "cfpb-newsroom": {
       "status": "ok",
@@ -187,20 +167,12 @@
       "seconds": 0.4
     },
     "schemes-proxy": {
-      "status": "ok",
-      "fetched": 100,
-      "added": 4,
-      "oldest": "2011-11-15",
-      "newest": "2026-10-18",
-      "seconds": 0.6
+      "status": "error",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=(site:mastercard.com+OR+site:visa.com+OR+site:americanexpress.com)+when:14d&hl=en-US&gl=US&ceid=US:en"
     },
     "psps-proxy": {
-      "status": "ok",
-      "fetched": 100,
-      "added": 2,
-      "oldest": "2026-10-05",
-      "newest": "2026-10-18",
-      "seconds": 0.5
+      "status": "error",
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=(site:stripe.com+OR+site:newsroom.paypal-corp.com+OR+site:adyen.com+OR+site:swift.com)+when:14d&hl=en-US&gl=US&ceid=US:en"
     },
     "emvco-news": {
       "status": "ok",
@@ -208,7 +180,7 @@
       "added": 0,
       "oldest": null,
       "newest": null,
-      "seconds": 1.8
+      "seconds": 1.9
     },
     "treasury-au-media": {
       "status": "disabled"
