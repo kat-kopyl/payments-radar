@@ -1,19 +1,19 @@
 {
-  "run_at": "2026-10-29T13:15:29Z",
+  "run_at": "2026-10-29T19:06:58Z",
   "since": null,
   "sources": {
     "pymnts": {
       "status": "ok",
       "fetched": 200,
-      "added": 7,
+      "added": 14,
       "oldest": "2026-10-21",
       "newest": "2026-10-29",
-      "seconds": 2.3
+      "seconds": 2.5
     },
     "finextra-payments": {
       "status": "ok",
       "fetched": 49,
-      "added": 11,
+      "added": 4,
       "oldest": "2026-10-14",
       "newest": "2026-10-29",
       "seconds": 0.2
@@ -24,23 +24,23 @@
       "added": 5,
       "oldest": "2026-10-15",
       "newest": "2026-10-29",
-      "seconds": 0.1
+      "seconds": 0.2
     },
     "thepaypers": {
       "status": "ok",
-      "fetched": 15,
+      "fetched": 16,
       "added": 11,
       "oldest": "2026-10-26",
       "newest": "2026-10-29",
-      "seconds": 7.9
+      "seconds": 7.7
     },
     "ft-companies-financials": {
       "status": "ok",
       "fetched": 25,
-      "added": 1,
-      "oldest": "2026-10-27",
+      "added": 6,
+      "oldest": "2026-10-28",
       "newest": "2026-10-29",
-      "seconds": 0.4
+      "seconds": 0.6
     },
     "rba-media-releases": {
       "status": "ok",
@@ -72,20 +72,20 @@
       "added": 0,
       "oldest": "2026-08-31",
       "newest": "2026-10-15",
-      "seconds": 0.5
+      "seconds": 0.7
     },
     "asic-news-proxy": {
       "status": "ok",
-      "fetched": 36,
+      "fetched": 100,
       "added": 0,
-      "oldest": "2026-10-07",
+      "oldest": "2026-10-16",
       "newest": "2026-10-29",
-      "seconds": 0.3
+      "seconds": 0.5
     },
     "austrac-proxy": {
       "status": "ok",
       "fetched": 19,
-      "added": 1,
+      "added": 0,
       "oldest": "2026-03-30",
       "newest": "2026-10-29",
       "seconds": 0.3
@@ -96,7 +96,7 @@
       "added": 0,
       "oldest": "2025-07-04",
       "newest": "2026-10-27",
-      "seconds": 0.3
+      "seconds": 0.4
     },
     "fed-press": {
       "status": "ok",
@@ -110,22 +110,22 @@
       "status": "ok",
       "fetched": 15,
       "added": 2,
-      "oldest": "2026-10-08",
+      "oldest": "2026-10-14",
       "newest": "2026-10-29",
-      "seconds": 0.7
+      "seconds": 0.6
     },
     "boe-news": {
       "status": "ok",
       "fetched": 50,
       "added": 1,
-      "oldest": "2026-07-07",
+      "oldest": "2026-07-08",
       "newest": "2026-10-29",
-      "seconds": 0.6
+      "seconds": 0.8
     },
     "fca-news": {
       "status": "ok",
       "fetched": 20,
-      "added": 3,
+      "added": 0,
       "oldest": "2026-10-13",
       "newest": "2026-10-29",
       "seconds": 0.2
@@ -133,7 +133,7 @@
     "psr-proxy": {
       "status": "ok",
       "fetched": 3,
-      "added": 1,
+      "added": 0,
       "oldest": "2026-10-22",
       "newest": "2026-10-23",
       "seconds": 0.3
@@ -141,24 +141,24 @@
     "bis-press": {
       "status": "ok",
       "fetched": 10,
-      "added": 1,
+      "added": 0,
       "oldest": "2026-06-28",
       "newest": "2026-10-29",
-      "seconds": 0.4
+      "seconds": 0.6
     },
     "bis-cbspeeches": {
       "status": "ok",
       "fetched": 50,
-      "added": 0,
-      "oldest": "2026-10-13",
-      "newest": "2026-10-27",
-      "seconds": 1.5
+      "added": 5,
+      "oldest": "2026-10-19",
+      "newest": "2026-10-29",
+      "seconds": 0.5
     },
     "mas-proxy": {
       "status": "ok",
-      "fetched": 42,
-      "added": 4,
-      "oldest": "2018-02-17",
+      "fetched": 44,
+      "added": 1,
+      "oldest": "2017-10-23",
       "newest": "2026-10-29",
       "seconds": 0.3
     },
@@ -168,7 +168,7 @@
       "added": 0,
       "oldest": "2025-10-30",
       "newest": "2026-10-29",
-      "seconds": 3.6
+      "seconds": 3.4
     },
     "cfpb-newsroom": {
       "status": "ok",
@@ -176,7 +176,7 @@
       "added": 0,
       "oldest": "2025-02-03",
       "newest": "2026-10-14",
-      "seconds": 0.1
+      "seconds": 0.2
     },
     "occ-news": {
       "status": "ok",
@@ -188,17 +188,17 @@
     },
     "schemes-proxy": {
       "status": "ok",
-      "fetched": 76,
-      "added": 11,
-      "oldest": "2024-11-08",
+      "fetched": 100,
+      "added": 57,
+      "oldest": "2026-10-05",
       "newest": "2026-10-29",
-      "seconds": 0.4
+      "seconds": 0.5
     },
     "psps-proxy": {
       "status": "ok",
       "fetched": 100,
-      "added": 1,
-      "oldest": "2026-10-15",
+      "added": 15,
+      "oldest": "2026-06-18",
       "newest": "2026-10-29",
       "seconds": 0.5
     },
@@ -208,7 +208,7 @@
       "added": 0,
       "oldest": null,
       "newest": null,
-      "seconds": 2.0
+      "seconds": 2.2
     },
     "treasury-au-media": {
       "status": "disabled"
