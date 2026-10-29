@@ -1,11 +1,11 @@
 {
-  "run_at": "2026-10-29T07:15:49Z",
+  "run_at": "2026-10-29T13:15:29Z",
   "since": null,
   "sources": {
     "pymnts": {
       "status": "ok",
       "fetched": 200,
-      "added": 3,
+      "added": 7,
       "oldest": "2026-10-21",
       "newest": "2026-10-29",
       "seconds": 2.3
@@ -13,31 +13,31 @@
     "finextra-payments": {
       "status": "ok",
       "fetched": 49,
-      "added": 0,
-      "oldest": "2026-10-07",
-      "newest": "2026-10-28",
-      "seconds": 0.1
+      "added": 11,
+      "oldest": "2026-10-14",
+      "newest": "2026-10-29",
+      "seconds": 0.2
     },
     "finextra-headlines": {
       "status": "ok",
       "fetched": 53,
-      "added": 0,
+      "added": 5,
       "oldest": "2026-10-15",
       "newest": "2026-10-29",
       "seconds": 0.1
     },
     "thepaypers": {
       "status": "ok",
-      "fetched": 16,
-      "added": 0,
+      "fetched": 15,
+      "added": 11,
       "oldest": "2026-10-26",
       "newest": "2026-10-29",
-      "seconds": 7.4
+      "seconds": 7.9
     },
     "ft-companies-financials": {
       "status": "ok",
       "fetched": 25,
-      "added": 3,
+      "added": 1,
       "oldest": "2026-10-27",
       "newest": "2026-10-29",
       "seconds": 0.4
@@ -48,7 +48,7 @@
       "added": 0,
       "oldest": "2026-10-14",
       "newest": "2026-10-14",
-      "seconds": 0.6
+      "seconds": 0.7
     },
     "rba-speeches": {
       "status": "ok",
@@ -64,7 +64,7 @@
       "added": 0,
       "oldest": "2026-09-21",
       "newest": "2026-10-23",
-      "seconds": 1.3
+      "seconds": 1.2
     },
     "apra-news": {
       "status": "ok",
@@ -72,23 +72,23 @@
       "added": 0,
       "oldest": "2026-08-31",
       "newest": "2026-10-15",
-      "seconds": 0.4
+      "seconds": 0.5
     },
     "asic-news-proxy": {
       "status": "ok",
       "fetched": 36,
-      "added": 3,
+      "added": 0,
       "oldest": "2026-10-07",
       "newest": "2026-10-29",
-      "seconds": 0.4
+      "seconds": 0.3
     },
     "austrac-proxy": {
       "status": "ok",
-      "fetched": 18,
+      "fetched": 19,
       "added": 1,
       "oldest": "2026-03-30",
-      "newest": "2026-10-28",
-      "seconds": 0.8
+      "newest": "2026-10-29",
+      "seconds": 0.3
     },
     "accc-proxy": {
       "status": "ok",
@@ -96,7 +96,7 @@
       "added": 0,
       "oldest": "2025-07-04",
       "newest": "2026-10-27",
-      "seconds": 0.2
+      "seconds": 0.3
     },
     "fed-press": {
       "status": "ok",
@@ -109,42 +109,42 @@
     "ecb-press": {
       "status": "ok",
       "fetched": 15,
-      "added": 0,
-      "oldest": "2026-10-07",
-      "newest": "2026-10-27",
-      "seconds": 0.6
+      "added": 2,
+      "oldest": "2026-10-08",
+      "newest": "2026-10-29",
+      "seconds": 0.7
     },
     "boe-news": {
       "status": "ok",
       "fetched": 50,
-      "added": 0,
-      "oldest": "2026-07-06",
-      "newest": "2026-10-28",
-      "seconds": 0.3
+      "added": 1,
+      "oldest": "2026-07-07",
+      "newest": "2026-10-29",
+      "seconds": 0.6
     },
     "fca-news": {
       "status": "ok",
       "fetched": 20,
-      "added": 0,
-      "oldest": "2026-10-08",
-      "newest": "2026-10-27",
-      "seconds": 0.1
+      "added": 3,
+      "oldest": "2026-10-13",
+      "newest": "2026-10-29",
+      "seconds": 0.2
     },
     "psr-proxy": {
       "status": "ok",
-      "fetched": 2,
-      "added": 0,
+      "fetched": 3,
+      "added": 1,
       "oldest": "2026-10-22",
-      "newest": "2026-10-22",
-      "seconds": 0.2
+      "newest": "2026-10-23",
+      "seconds": 0.3
     },
     "bis-press": {
       "status": "ok",
       "fetched": 10,
-      "added": 0,
-      "oldest": "2026-06-23",
-      "newest": "2026-10-16",
-      "seconds": 1.4
+      "added": 1,
+      "oldest": "2026-06-28",
+      "newest": "2026-10-29",
+      "seconds": 0.4
     },
     "bis-cbspeeches": {
       "status": "ok",
@@ -152,23 +152,23 @@
       "added": 0,
       "oldest": "2026-10-13",
       "newest": "2026-10-27",
-      "seconds": 0.5
+      "seconds": 1.5
     },
     "mas-proxy": {
       "status": "ok",
-      "fetched": 33,
-      "added": 2,
+      "fetched": 42,
+      "added": 4,
       "oldest": "2018-02-17",
-      "newest": "2026-10-28",
-      "seconds": 0.4
+      "newest": "2026-10-29",
+      "seconds": 0.3
     },
     "hkma-press": {
       "status": "ok",
       "fetched": 428,
-      "added": 1,
+      "added": 0,
       "oldest": "2025-10-30",
       "newest": "2026-10-29",
-      "seconds": 4.0
+      "seconds": 3.6
     },
     "cfpb-newsroom": {
       "status": "ok",
@@ -188,16 +188,16 @@
     },
     "schemes-proxy": {
       "status": "ok",
-      "fetched": 100,
-      "added": 25,
-      "oldest": "2026-10-17",
+      "fetched": 76,
+      "added": 11,
+      "oldest": "2024-11-08",
       "newest": "2026-10-29",
-      "seconds": 0.5
+      "seconds": 0.4
     },
     "psps-proxy": {
       "status": "ok",
       "fetched": 100,
-      "added": 10,
+      "added": 1,
       "oldest": "2026-10-15",
       "newest": "2026-10-29",
       "seconds": 0.5
@@ -208,7 +208,7 @@
       "added": 0,
       "oldest": null,
       "newest": null,
-      "seconds": 2.8
+      "seconds": 2.0
     },
     "treasury-au-media": {
       "status": "disabled"
