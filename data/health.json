@@ -1,43 +1,39 @@
 {
-  "run_at": "2026-11-11T07:31:28Z",
+  "run_at": "2026-11-11T13:27:46Z",
   "since": null,
   "sources": {
     "pymnts": {
-      "status": "ok",
-      "fetched": 200,
-      "added": 1,
-      "oldest": "2026-11-03",
-      "newest": "2026-11-11",
-      "seconds": 2.4
+      "status": "error",
+      "error": "403 Client Error: Forbidden for url: https://www.pymnts.com/wp-json/wp/v2/posts?per_page=100&page=1&_fields=id%2Cdate_gmt%2Clink%2Ctitle%2Cexcerpt&orderby=date&order=desc"
     },
     "finextra-payments": {
       "status": "ok",
       "fetched": 49,
-      "added": 0,
-      "oldest": "2026-09-24",
+      "added": 3,
+      "oldest": "2026-10-22",
       "newest": "2026-11-12",
       "seconds": 0.1
     },
     "finextra-headlines": {
       "status": "ok",
       "fetched": 52,
-      "added": 0,
+      "added": 6,
       "oldest": "2026-10-28",
       "newest": "2026-11-12",
-      "seconds": 0.1
+      "seconds": 0.6
     },
     "thepaypers": {
       "status": "ok",
       "fetched": 15,
-      "added": 0,
+      "added": 10,
       "oldest": "2026-11-06",
       "newest": "2026-11-11",
-      "seconds": 8.0
+      "seconds": 7.0
     },
     "ft-companies-financials": {
       "status": "ok",
       "fetched": 25,
-      "added": 6,
+      "added": 0,
       "oldest": "2026-11-06",
       "newest": "2026-11-11",
       "seconds": 0.5
@@ -48,7 +44,7 @@
       "added": 0,
       "oldest": "2026-11-06",
       "newest": "2026-11-06",
-      "seconds": 0.7
+      "seconds": 0.8
     },
     "rba-speeches": {
       "status": "ok",
@@ -64,7 +60,7 @@
       "added": 0,
       "oldest": "2026-09-23",
       "newest": "2026-10-29",
-      "seconds": 1.0
+      "seconds": 1.2
     },
     "apra-news": {
       "status": "ok",
@@ -72,19 +68,19 @@
       "added": 0,
       "oldest": "2026-08-31",
       "newest": "2026-10-29",
-      "seconds": 0.1
+      "seconds": 0.2
     },
     "asic-news-proxy": {
       "status": "ok",
-      "fetched": 57,
-      "added": 3,
+      "fetched": 49,
+      "added": 2,
       "oldest": "2026-08-12",
       "newest": "2026-11-11",
-      "seconds": 0.6
+      "seconds": 0.3
     },
     "austrac-proxy": {
       "status": "ok",
-      "fetched": 20,
+      "fetched": 18,
       "added": 0,
       "oldest": "2026-03-30",
       "newest": "2026-11-11",
@@ -92,10 +88,10 @@
     },
     "accc-proxy": {
       "status": "ok",
-      "fetched": 14,
-      "added": 0,
+      "fetched": 16,
+      "added": 2,
       "oldest": "2022-09-29",
-      "newest": "2026-11-09",
+      "newest": "2026-11-10",
       "seconds": 0.3
     },
     "fed-press": {
@@ -112,7 +108,7 @@
       "added": 0,
       "oldest": "2026-10-29",
       "newest": "2026-11-10",
-      "seconds": 0.6
+      "seconds": 0.5
     },
     "boe-news": {
       "status": "ok",
@@ -144,7 +140,7 @@
       "added": 0,
       "oldest": "2026-11-10",
       "newest": "2026-11-10",
-      "seconds": 0.5
+      "seconds": 0.6
     },
     "bis-cbspeeches": {
       "status": "ok",
@@ -152,23 +148,23 @@
       "added": 0,
       "oldest": "2026-10-27",
       "newest": "2026-11-10",
-      "seconds": 1.5
+      "seconds": 0.4
     },
     "mas-proxy": {
       "status": "ok",
-      "fetched": 47,
-      "added": 0,
+      "fetched": 41,
+      "added": 2,
       "oldest": "2017-10-23",
       "newest": "2026-11-11",
       "seconds": 0.3
     },
     "hkma-press": {
       "status": "ok",
-      "fetched": 427,
-      "added": 1,
+      "fetched": 429,
+      "added": 2,
       "oldest": "2025-11-11",
       "newest": "2026-11-11",
-      "seconds": 3.8
+      "seconds": 3.7
     },
     "cfpb-newsroom": {
       "status": "ok",
@@ -176,7 +172,7 @@
       "added": 0,
       "oldest": "2025-02-03",
       "newest": "2026-10-14",
-      "seconds": 0.1
+      "seconds": 0.2
     },
     "occ-news": {
       "status": "ok",
@@ -184,27 +180,27 @@
       "added": 0,
       "oldest": "2026-10-13",
       "newest": "2026-11-05",
-      "seconds": 5.4
+      "seconds": 0.3
     },
     "schemes-proxy": {
       "status": "ok",
-      "fetched": 74,
+      "fetched": 68,
       "added": 0,
       "oldest": "2020-07-17",
-      "newest": "2026-11-10",
+      "newest": "2026-11-11",
       "seconds": 0.4
     },
     "psps-proxy": {
       "status": "ok",
-      "fetched": 100,
-      "added": 3,
-      "oldest": "2024-02-14",
+      "fetched": 94,
+      "added": 2,
+      "oldest": "2026-10-28",
       "newest": "2026-11-11",
       "seconds": 0.4
     },
     "emvco-news": {
       "status": "error",
-      "error": "500 Server Error: Internal Server Error for url: https://www.emvco.com/feed/"
+      "error": "503 Server Error: Service Unavailable for url: https://www.emvco.com/feed/"
     },
     "treasury-au-media": {
       "status": "disabled"
