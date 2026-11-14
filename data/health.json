@@ -1,30 +1,22 @@
 {
-  "run_at": "2026-11-14T18:10:33Z",
+  "run_at": "2026-11-14T22:29:31Z",
   "since": null,
   "sources": {
     "pymnts": {
       "status": "ok",
       "fetched": 200,
-      "added": 1,
+      "added": 0,
       "oldest": "2026-11-05",
       "newest": "2026-11-14",
-      "seconds": 2.6
+      "seconds": 2.3
     },
     "finextra-payments": {
-      "status": "ok",
-      "fetched": 48,
-      "added": 0,
-      "oldest": "2026-10-14",
-      "newest": "2026-11-13",
-      "seconds": 0.1
+      "status": "error",
+      "error": "403 Client Error: Forbidden for url: https://www.finextra.com/rss/channel.aspx?channel=payments"
     },
     "finextra-headlines": {
-      "status": "ok",
-      "fetched": 51,
-      "added": 0,
-      "oldest": "2026-10-29",
-      "newest": "2026-11-13",
-      "seconds": 0.1
+      "status": "error",
+      "error": "403 Client Error: Forbidden for url: https://www.finextra.com/rss/headlines.aspx"
     },
     "thepaypers": {
       "status": "ok",
@@ -32,15 +24,15 @@
       "added": 0,
       "oldest": "2026-11-14",
       "newest": "2026-11-14",
-      "seconds": 8.3
+      "seconds": 7.4
     },
     "ft-companies-financials": {
       "status": "ok",
       "fetched": 25,
-      "added": 1,
+      "added": 0,
       "oldest": "2026-11-12",
       "newest": "2026-11-14",
-      "seconds": 0.5
+      "seconds": 0.7
     },
     "rba-media-releases": {
       "status": "ok",
@@ -48,7 +40,7 @@
       "added": 0,
       "oldest": "2026-11-06",
       "newest": "2026-11-06",
-      "seconds": 0.5
+      "seconds": 1.2
     },
     "rba-speeches": {
       "status": "ok",
@@ -56,7 +48,7 @@
       "added": 0,
       "oldest": "2026-11-09",
       "newest": "2026-11-09",
-      "seconds": 0.4
+      "seconds": 1.2
     },
     "treasury-au-consultations": {
       "status": "ok",
@@ -64,7 +56,7 @@
       "added": 0,
       "oldest": "2026-10-09",
       "newest": "2026-11-12",
-      "seconds": 1.1
+      "seconds": 1.0
     },
     "apra-news": {
       "status": "ok",
@@ -72,12 +64,12 @@
       "added": 0,
       "oldest": "2026-08-31",
       "newest": "2026-10-29",
-      "seconds": 0.5
+      "seconds": 0.2
     },
     "asic-news-proxy": {
       "status": "ok",
-      "fetched": 49,
-      "added": 2,
+      "fetched": 51,
+      "added": 3,
       "oldest": "2025-06-21",
       "newest": "2026-11-14",
       "seconds": 0.3
@@ -88,7 +80,7 @@
       "added": 0,
       "oldest": "2026-03-30",
       "newest": "2026-11-11",
-      "seconds": 0.3
+      "seconds": 0.2
     },
     "accc-proxy": {
       "status": "ok",
@@ -112,7 +104,7 @@
       "added": 0,
       "oldest": "2026-10-29",
       "newest": "2026-11-13",
-      "seconds": 0.7
+      "seconds": 0.5
     },
     "boe-news": {
       "status": "ok",
@@ -120,7 +112,7 @@
       "added": 0,
       "oldest": "2026-07-14",
       "newest": "2026-11-13",
-      "seconds": 0.6
+      "seconds": 0.4
     },
     "fca-news": {
       "status": "ok",
@@ -152,12 +144,12 @@
       "added": 0,
       "oldest": "2026-10-29",
       "newest": "2026-11-12",
-      "seconds": 0.5
+      "seconds": 0.4
     },
     "mas-proxy": {
       "status": "ok",
       "fetched": 44,
-      "added": 2,
+      "added": 0,
       "oldest": "2017-11-12",
       "newest": "2026-11-13",
       "seconds": 0.2
@@ -168,7 +160,7 @@
       "added": 0,
       "oldest": "2025-11-13",
       "newest": "2026-11-13",
-      "seconds": 3.4
+      "seconds": 2.4
     },
     "cfpb-newsroom": {
       "status": "ok",
@@ -184,20 +176,20 @@
       "added": 0,
       "oldest": "2026-10-14",
       "newest": "2026-11-13",
-      "seconds": 0.4
+      "seconds": 0.3
     },
     "schemes-proxy": {
       "status": "ok",
       "fetched": 100,
-      "added": 5,
-      "oldest": "2020-07-17",
+      "added": 1,
+      "oldest": "2016-09-27",
       "newest": "2026-11-14",
       "seconds": 0.4
     },
     "psps-proxy": {
       "status": "ok",
-      "fetched": 90,
-      "added": 29,
+      "fetched": 87,
+      "added": 0,
       "oldest": "2022-09-22",
       "newest": "2026-11-14",
       "seconds": 0.4
